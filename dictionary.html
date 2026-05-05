@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>辞書</title>
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>辞書</h1>
+    <p>4語ずつ並ぶ見やすい辞書レイアウトに調整しました。</p>
+  </header>
+
+  <div class="nav">
+    <a href="index.html">ホーム</a>
+    <a href="builder.html">文章ビルダー</a>
+    <a href="translator.html">翻訳ツール</a>
+    <a href="dictionary.html" class="active">辞書</a>
+    <a href="phrases.html">例文集</a>
+    <a href="learning.html">学習ソフト</a>
+    <a href="grammar.html">文法ガイド</a>
+  </div>
+
+  <section class="card">
+    <div class="grid grid-3">
+      <div><label>検索</label><input id="search" placeholder="日本語 / OS^v語 / 分類"></div>
+      <div><label>並べ替え</label><select id="sort"><option value="jp">日本語順</option><option value="ln">OS^v語順</option><option value="type">品詞順</option></select></div>
+      <div><label>絞り込み</label><select id="filter"><option value="all">すべて</option><option value="sub">主語候補</option><option value="obj">目的語候補</option><option value="verb">動詞</option><option value="adj">形容詞</option><option value="adv">副詞</option></select></div>
+    </div>
+    <div class="sep"></div>
+    <div class="grid grid-4" style="margin-bottom:12px">
+      <div class="kpi"><strong id="count">0</strong><span class="muted">収録語数</span></div>
+      <div class="kpi"><strong id="shown">0</strong><span class="muted">表示中</span></div>
+      <div class="kpi"><strong id="types">0</strong><span class="muted">分類数</span></div>
+      <div class="kpi"><strong id="pairs">0</strong><span class="muted">表示列数</span></div>
+    </div>
+    <div id="list" class="grid grid-4"></div>
+  </section>
+
+  <div class="footer">OS^v Language Suite</div>
+</div>
+
+<script>
+const list = document.getElementById('list');
+const search = document.getElementById('search');
+const sortSel = document.getElementById('sort');
+const filterSel = document.getElementById('filter');
+
+function filteredData() {
+  const q = search.value.trim().toLowerCase();
+  const f = filterSel.value;
+  let arr = (window.OSV.dictionaryData || []).slice();
+  if (f !== 'all') arr = arr.filter(x => x.type === f);
+  if (q) {
+    arr = arr.filter(x => `${x.jp} ${x.ln} ${x.type} ${x.cat}`.toLowerCase().includes(q));
+  }
+  const s = sortSel.value;
+  arr.sort((a, b) => String(a[s]).localeCompare(String(b[s]), 'ja'));
+  return arr;
+}
+
+function render() {
+  const all = window.OSV.dictionaryData || [];
+  const arr = filteredData();
+  document.getElementById('count').textContent = all.length;
+  document.getElementById('shown').textContent = arr.length;
+  document.getElementById('types').textContent = new Set(all.map(x => x.type)).size;
+  document.getElementById('pairs').textContent = 4;
+
+  list.innerHTML = arr.map(x => `
+    <div class="item">
+      <div class="row">
+        <span class="badge">${escapeHtml(x.type)}</span>
+        <span class="badge">${escapeHtml(x.cat)}</span>
+      </div>
+      <div style="margin-top:10px">
+        <div class="big">${escapeHtml(x.jp)}</div>
+        <div class="lang" style="color:#2563eb;font-weight:800">${escapeHtml(x.ln)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+search.addEventListener('input', render);
+sortSel.addEventListener('change', render);
+filterSel.addEventListener('change', render);
+render();
+</script>
+</body>
+</html>

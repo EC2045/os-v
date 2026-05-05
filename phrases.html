@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>例文集</title>
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>例文集</h1>
+    <p>OS^v語の機能を分割して、使いやすく拡張した版です。</p>
+  </header>
+  
+    <div class="nav">
+      <a href="index.html">ホーム</a>
+      <a href="builder.html" >文章ビルダー</a>
+      <a href="translator.html" >翻訳ツール</a>
+      <a href="dictionary.html" >辞書</a>
+      <a href="phrases.html" class="active">例文集</a>
+      <a href="learning.html" >学習ソフト</a>
+      <a href="grammar.html" >文法ガイド</a>
+    </div>
+    
+
+<div class="card">
+  <div class="row">
+    <div>
+      <label>カテゴリ</label>
+      <select id="cat">
+        <option value="all">すべて</option>
+        <option value="基本">基本</option>
+        <option value="否定">否定</option>
+        <option value="自然">自然</option>
+        <option value="学習">学習</option>
+        <option value="移動">移動</option>
+        <option value="技術">技術</option>
+        <option value="抽象">抽象</option>
+        <option value="文法">文法</option>
+        <option value="感嘆">感嘆</option>
+      </select>
+    </div>
+    <div>
+      <label>検索</label>
+      <input id="q" placeholder="例文を検索">
+    </div>
+  </div>
+  <div class="sep"></div>
+  <div id="plist" class="grid grid-2"></div>
+</div>
+<script>
+const pList = document.getElementById('plist');
+const cat = document.getElementById('cat');
+const q = document.getElementById('q');
+function render() {
+  const query = q.value.trim().toLowerCase();
+  const c = cat.value;
+  const arr = (window.OSV.phraseData || []).filter(x => (c === 'all' || x.cat === c) && (!query || `${x.jp} ${x.ln} ${x.cat}`.toLowerCase().includes(query)));
+  pList.innerHTML = arr.map(x => `
+    <div class="item">
+      <span class="badge">${escapeHtml(x.cat)}</span>
+      <div style="margin-top:10px"><strong>${escapeHtml(x.jp)}</strong></div>
+      <div class="lang" style="color:#2563eb;font-weight:800;margin-top:6px">${escapeHtml(x.ln)}</div>
+    </div>
+  `).join('');
+}
+cat.addEventListener('change', render);
+q.addEventListener('input', render);
+render();
+</script>
+
+  <div class="footer">OS^v Language Suite</div>
+</div>
+</body>
+</html>

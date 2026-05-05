@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>翻訳ツール</title>
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+<script src="app.js"></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero">
+    <h1>翻訳ツール</h1>
+    <p>実装は <b>日本語 → OS^v語</b> と <b>OS^v語 → 日本語</b> のみです。</p>
+  </header>
+
+  <div class="nav">
+    <a href="index.html">ホーム</a>
+    <a href="builder.html">文章ビルダー</a>
+    <a href="translator.html" class="active">翻訳ツール</a>
+    <a href="dictionary.html">辞書</a>
+    <a href="phrases.html">例文集</a>
+    <a href="learning.html">学習ソフト</a>
+    <a href="grammar.html">文法ガイド</a>
+  </div>
+
+  <div class="grid grid-2">
+    <section class="card">
+      <h2>入力</h2>
+      <div class="grid grid-2">
+        <div>
+          <label>翻訳方向</label>
+          <select id="direction">
+            <option value="jp-to-osv">日本語 → OS^v語</option>
+            <option value="osv-to-jp">OS^v語 → 日本語</option>
+          </select>
+        </div>
+        <div>
+          <label>例</label>
+          <button class="soft" id="sample">サンプルを入れる</button>
+        </div>
+      </div>
+      <div class="sep"></div>
+      <textarea id="input" placeholder="単語または文を入力"></textarea>
+      <div class="btnrow" style="margin-top:10px">
+        <button class="primary" id="translate">翻訳</button>
+        <button id="clear">クリア</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>結果</h2>
+      <div id="output" class="mutedbox lang big" style="min-height:180px;white-space:pre-wrap">---</div>
+      <div class="sep"></div>
+      <div id="meta" class="row">
+        <span class="tag">方向: <span id="modeLabel">日本語 → OS^v語</span></span>
+        <span class="tag">入力語数: <span id="inCount">0</span></span>
+        <span class="tag">出力語数: <span id="outCount">0</span></span>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer">OS^v Language Suite</div>
+</div>
+
+<script>
+const input = document.getElementById('input');
+const output = document.getElementById('output');
+const direction = document.getElementById('direction');
+const modeLabel = document.getElementById('modeLabel');
+
+function render() {
+  const text = input.value.trim();
+  const dir = direction.value;
+  modeLabel.textContent = dir === 'jp-to-osv' ? '日本語 → OS^v語' : 'OS^v語 → 日本語';
+  const result = text ? translateText(text, dir) : '';
+  output.textContent = result || '---';
+  document.getElementById('inCount').textContent = text ? tokenize(text).length : 0;
+  document.getElementById('outCount').textContent = result ? tokenize(result).length : 0;
+}
+
+document.getElementById('translate').onclick = render;
+direction.onchange = render;
+input.oninput = render;
+document.getElementById('clear').onclick = () => { input.value = ''; render(); };
+document.getElementById('sample').onclick = () => {
+  if (direction.value === 'jp-to-osv') input.value = '私 は 猫 を 愛する';
+  else input.value = 'nek glis^S ie';
+  render();
+};
+render();
+</script>
+</body>
+</html>
