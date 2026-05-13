@@ -1571,9 +1571,190 @@ window.OSV_DATA = {
     "ln": "qmark",
     "type": "part",
     "cat": "助詞"
+  },
+  {
+    "jp": "猫",
+    "ln": "nek",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "犬",
+    "ln": "vark",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "鳥",
+    "ln": "zeln",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "魚",
+    "ln": "krox",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "狐",
+    "ln": "lix",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "狼",
+    "ln": "vorx",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "熊",
+    "ln": "grun",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "蛇",
+    "ln": "snax",
+    "type": "obj",
+    "cat": "animal"
+  },
+  {
+    "jp": "こんにちは",
+    "ln": "zave",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "おはよう",
+    "ln": "mire",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "こんばんは",
+    "ln": "noxe",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "ありがとう",
+    "ln": "vare",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "ごめん",
+    "ln": "drex",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "さようなら",
+    "ln": "faro",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "またね",
+    "ln": "melo",
+    "type": "adv",
+    "cat": "greet"
+  },
+  {
+    "jp": "はい",
+    "ln": "ye",
+    "type": "adv",
+    "cat": "reply"
+  },
+  {
+    "jp": "いいえ",
+    "ln": "noe",
+    "type": "adv",
+    "cat": "reply"
+  },
+  {
+    "jp": "OK",
+    "ln": "oka",
+    "type": "adv",
+    "cat": "reply"
+  },
+  {
+    "jp": "行く",
+    "ln": "vexa",
+    "type": "verb",
+    "cat": "daily"
+  },
+  {
+    "jp": "来る",
+    "ln": "nexa",
+    "type": "verb",
+    "cat": "daily"
+  },
+  {
+    "jp": "食べる",
+    "ln": "graxa",
+    "type": "verb",
+    "cat": "food"
+  },
+  {
+    "jp": "飲む",
+    "ln": "drix",
+    "type": "verb",
+    "cat": "food"
+  },
+  {
+    "jp": "話す",
+    "ln": "laxa",
+    "type": "verb",
+    "cat": "talk"
+  },
+  {
+    "jp": "聞く",
+    "ln": "sona",
+    "type": "verb",
+    "cat": "talk"
+  },
+  {
+    "jp": "楽しい",
+    "ln": "yoro",
+    "type": "adj",
+    "cat": "emotion"
+  },
+  {
+    "jp": "悲しい",
+    "ln": "sora",
+    "type": "adj",
+    "cat": "emotion"
+  },
+  {
+    "jp": "怒る",
+    "ln": "vexa",
+    "type": "verb",
+    "cat": "emotion"
+  },
+  {
+    "jp": "眠い",
+    "ln": "drom",
+    "type": "adj",
+    "cat": "emotion"
+  },
+  {
+    "jp": "Tシャツ",
+    "ln": "tixa",
+    "type": "obj",
+    "cat": "cloth"
+  },
+  {
+    "jp": "靴",
+    "ln": "klen",
+    "type": "obj",
+    "cat": "cloth"
   }
-],
-  phraseData: [
+]
+
+  ,phraseData: [
   {
     "jp": "私は猫を愛している",
     "ln": "nek glis^S ie",

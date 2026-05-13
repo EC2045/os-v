@@ -40,7 +40,7 @@
         <div>
           <label>目的語 (O)</label>
           <select id="b-obj" onchange="updateBuilder()"></select>
-          <label style="display:block;margin-top:8px"><input type="checkbox" id="b-obj-p" onchange="updateBuilder()"> 複数形 (^^)</label>
+          <label style="display:block;margin-top:8px"><input type="checkbox" id="b-obj-p" onchange="updateBuilder()"> 複数形 (;)</label>
         </div>
         <div>
           <label>動詞 (V)</label>
@@ -55,7 +55,7 @@
         <div>
           <label>主語 (S)</label>
           <select id="b-sub" onchange="updateBuilder()"></select>
-          <label style="display:block;margin-top:8px"><input type="checkbox" id="b-sub-p" onchange="updateBuilder()"> 複数形 (^^)</label>
+          <label style="display:block;margin-top:8px"><input type="checkbox" id="b-sub-p" onchange="updateBuilder()"> 複数形 (;)</label>
         </div>
       </div>
 
@@ -116,7 +116,7 @@ function updateBuilder() {
   const oPlural = document.getElementById('b-obj-p').checked;
   const sPlural = document.getElementById('b-sub-p').checked;
 
-  let sentence = `${o}${oPlural ? '^^' : ''} ${v}${bTense} ${s}${sPlural ? '^^' : ''}`;
+  let sentence = `${o}${oPlural ? ';' : ''} ${v}${bTense} ${s}${sPlural ? ';' : ''}`;
 
   if (isNeg) {
     sentence = 'nlot ' + sentence;
