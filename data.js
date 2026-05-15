@@ -610,13 +610,7 @@ window.OSV_DATA = {
     "jp": "扉",
     "ln": "vork",
     "type": "obj",
-    "cat": "日常"
-  },
-  {
-    "jp": "窓",
-    "ln": "winx",
-    "type": "obj",
-    "cat": "日常"
+    "cat": "建物"
   },
   {
     "jp": "鍵",
@@ -1309,24 +1303,6 @@ window.OSV_DATA = {
     "cat": "空間"
   },
   {
-    "jp": "低い",
-    "ln": "lowx",
-    "type": "adj",
-    "cat": "空間"
-  },
-  {
-    "jp": "新しい",
-    "ln": "newx",
-    "type": "adj",
-    "cat": "時間"
-  },
-  {
-    "jp": "古い",
-    "ln": "oldx",
-    "type": "adj",
-    "cat": "時間"
-  },
-  {
     "jp": "温かい",
     "ln": "warm",
     "type": "adj",
@@ -1693,12 +1669,6 @@ window.OSV_DATA = {
     "cat": "daily"
   },
   {
-    "jp": "食べる",
-    "ln": "graxa",
-    "type": "verb",
-    "cat": "food"
-  },
-  {
     "jp": "飲む",
     "ln": "drix",
     "type": "verb",
@@ -1751,10 +1721,572 @@ window.OSV_DATA = {
     "ln": "klen",
     "type": "obj",
     "cat": "cloth"
-  }
-]
+  },
+  {
+    "jp": "誰か",
+    "ln": "somun",
+    "type": "sub",
+    "cat": "代名詞"
+  },
+  {
+    "jp": "どこか",
+    "ln": "somwa",
+    "type": "adv",
+    "cat": "代名詞"
+  },
+  {
+    "jp": "どこでも",
+    "ln": "alwa",
+    "type": "adv",
+    "cat": "代名詞"
+  },
+  {
+    "jp": "いつでも",
+    "ln": "altim",
+    "type": "adv",
+    "cat": "代名詞"
+  },
+  {
+    "jp": "何もかも",
+    "ln": "alvoth",
+    "type": "obj",
+    "cat": "代名詞"
+  },
+  {
+    "jp": "自分自身",
+    "ln": "selv",
+    "type": "sub",
+    "cat": "代名詞"
+  },
 
-  ,phraseData: [
+  // 2. 名詞：生活・身の回り
+  {
+    "jp": "洋服",
+    "ln": "clov",
+    "type": "obj",
+    "cat": "日常"
+  },
+  {
+    "jp": "鞄",
+    "ln": "bagu",
+    "type": "obj",
+    "cat": "日常"
+  },
+  {
+    "jp": "お金",
+    "ln": "moni",
+    "type": "obj",
+    "cat": "日常"
+  },
+  {
+    "jp": "鍵",
+    "ln": "kyx",
+    "type": "obj",
+    "cat": "日常"
+  },
+  {
+    "jp": "電話",
+    "ln": "telv",
+    "type": "obj",
+    "cat": "技術"
+  },
+  {
+    "jp": "本棚",
+    "ln": "shlv",
+    "type": "obj",
+    "cat": "家具"
+  },
+  {
+    "jp": "机",
+    "ln": "desv",
+    "type": "obj",
+    "cat": "家具"
+  },
+  {
+    "jp": "椅子",
+    "ln": "cher",
+    "type": "obj",
+    "cat": "家具"
+  },
+  {
+    "jp": "鏡",
+    "ln": "mirr",
+    "type": "obj",
+    "cat": "日常"
+  },
+  {
+    "jp": "窓",
+    "ln": "winx",
+    "type": "obj",
+    "cat": "建物"
+  },
+  {
+    "jp": "庭",
+    "ln": "gard",
+    "type": "obj",
+    "cat": "自然"
+  },
+
+  // 3. 名詞：自然・時間
+  {
+    "jp": "太陽",
+    "ln": "solv",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "月",
+    "ln": "luna",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "星",
+    "ln": "stex",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "雨",
+    "ln": "rain",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "雪",
+    "ln": "snow",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "風",
+    "ln": "wind",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "海",
+    "ln": "ocea",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "森",
+    "ln": "fore",
+    "type": "obj",
+    "cat": "自然"
+  },
+  {
+    "jp": "朝",
+    "ln": "morn",
+    "type": "obj",
+    "cat": "時間"
+  },
+  {
+    "jp": "昼",
+    "ln": "noon",
+    "type": "obj",
+    "cat": "時間"
+  },
+  {
+    "jp": "夜",
+    "ln": "nytx",
+    "type": "obj",
+    "cat": "時間"
+  },
+  {
+    "jp": "今日",
+    "ln": "toda",
+    "type": "adv",
+    "cat": "時間"
+  },
+  {
+    "jp": "明日",
+    "ln": "tomo",
+    "type": "adv",
+    "cat": "時間"
+  },
+  {
+    "jp": "昨日",
+    "ln": "yest",
+    "type": "adv",
+    "cat": "時間"
+  },
+
+  // 4. 名詞：食べ物・体
+  {
+    "jp": "水",
+    "ln": "aqua",
+    "type": "obj",
+    "cat": "食事"
+  },
+  {
+    "jp": "御飯",
+    "ln": "rice",
+    "type": "obj",
+    "cat": "食事"
+  },
+  {
+    "jp": "パン",
+    "ln": "panx",
+    "type": "obj",
+    "cat": "食事"
+  },
+  {
+    "jp": "肉",
+    "ln": "meat",
+    "type": "obj",
+    "cat": "食事"
+  },
+  {
+    "jp": "野菜",
+    "ln": "vege",
+    "type": "obj",
+    "cat": "食事"
+  },
+  {
+    "jp": "果物",
+    "ln": "frut",
+    "type": "obj",
+    "cat": "食事"
+  },
+  {
+    "jp": "頭",
+    "ln": "head",
+    "type": "obj",
+    "cat": "身体"
+  },
+  {
+    "jp": "心",
+    "ln": "hart",
+    "type": "obj",
+    "cat": "身体"
+  },
+  {
+    "jp": "手",
+    "ln": "hand",
+    "type": "obj",
+    "cat": "身体"
+  },
+  {
+    "jp": "足",
+    "ln": "foot",
+    "type": "obj",
+    "cat": "身体"
+  },
+  {
+    "jp": "目",
+    "ln": "eyex",
+    "type": "obj",
+    "cat": "身体"
+  },
+
+  // 5. 動詞：動作・変化
+  {
+    "jp": "飲む",
+    "ln": "drin",
+    "type": "verb",
+    "cat": "生活"
+  },
+  {
+    "jp": "寝る",
+    "ln": "slee",
+    "type": "verb",
+    "cat": "生活"
+  },
+  {
+    "jp": "買う",
+    "ln": "buyv",
+    "type": "verb",
+    "cat": "生活"
+  },
+  {
+    "jp": "売る",
+    "ln": "sell",
+    "type": "verb",
+    "cat": "生活"
+  },
+  {
+    "jp": "作る",
+    "ln": "make",
+    "type": "verb",
+    "cat": "制作"
+  },
+  {
+    "jp": "壊す",
+    "ln": "brek",
+    "type": "verb",
+    "cat": "破壊"
+  },
+  {
+    "jp": "待つ",
+    "ln": "wait",
+    "type": "verb",
+    "cat": "待機"
+  },
+  {
+    "jp": "急ぐ",
+    "ln": "hurr",
+    "type": "verb",
+    "cat": "移動"
+  },
+  {
+    "jp": "笑う",
+    "ln": "larf",
+    "type": "verb",
+    "cat": "感情"
+  },
+  {
+    "jp": "泣く",
+    "ln": "cryx",
+    "type": "verb",
+    "cat": "感情"
+  },
+  {
+    "jp": "愛する",
+    "ln": "love",
+    "type": "verb",
+    "cat": "感情"
+  },
+  {
+    "jp": "忘れる",
+    "ln": "forg",
+    "type": "verb",
+    "cat": "精神"
+  },
+  {
+    "jp": "覚える",
+    "ln": "remm",
+    "type": "verb",
+    "cat": "精神"
+  },
+  {
+    "jp": "信じる",
+    "ln": "beli",
+    "type": "verb",
+    "cat": "精神"
+  },
+
+  // 6. 形容詞：性質・感情
+  {
+    "jp": "大きい",
+    "ln": "larg",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "小さい",
+    "ln": "smal",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "重い",
+    "ln": "hevy",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "軽い",
+    "ln": "lite",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "新しい",
+    "ln": "newx",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "古い",
+    "ln": "oldx",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "安い",
+    "ln": "chep",
+    "type": "adj",
+    "cat": "価値"
+  },
+  {
+    "jp": "低い",
+    "ln": "lowx",
+    "type": "adj",
+    "cat": "位置"
+  },
+  {
+    "jp": "美しい",
+    "ln": "beut",
+    "type": "adj",
+    "cat": "評価"
+  },
+  {
+    "jp": "醜い",
+    "ln": "ugly",
+    "type": "adj",
+    "cat": "評価"
+  },
+  {
+    "jp": "幸せな",
+    "ln": "hapy",
+    "type": "adj",
+    "cat": "感情"
+  },
+  {
+    "jp": "悲しい",
+    "ln": "sadv",
+    "type": "adj",
+    "cat": "感情"
+  },
+  {
+    "jp": "怒った",
+    "ln": "angr",
+    "type": "adj",
+    "cat": "感情"
+  },
+  {
+    "jp": "静かな",
+    "ln": "quie",
+    "type": "adj",
+    "cat": "状態"
+  },
+  {
+    "jp": "うるさい",
+    "ln": "nois",
+    "type": "adj",
+    "cat": "状態"
+  },
+
+  // 7. 副詞・接続詞・関係
+  {
+    "jp": "とても",
+    "ln": "vryx",
+    "type": "adv",
+    "cat": "強調"
+  },
+  {
+    "jp": "少し",
+    "ln": "litl",
+    "type": "adv",
+    "cat": "程度"
+  },
+  {
+    "jp": "たぶん",
+    "ln": "maby",
+    "type": "adv",
+    "cat": "確信"
+  },
+  {
+    "jp": "絶対に",
+    "ln": "surx",
+    "type": "adv",
+    "cat": "確信"
+  },
+  {
+    "jp": "そして",
+    "ln": "andv",
+    "type": "conj",
+    "cat": "接続"
+  },
+  {
+    "jp": "しかし",
+    "ln": "butv",
+    "type": "conj",
+    "cat": "接続"
+  },
+  {
+    "jp": "または",
+    "ln": "orvx",
+    "type": "conj",
+    "cat": "接続"
+  },
+  {
+    "jp": "〜のために",
+    "ln": "forv",
+    "type": "prep",
+    "cat": "関係"
+  },
+  {
+    "jp": "〜と一緒に",
+    "ln": "with",
+    "type": "prep",
+    "cat": "関係"
+  },
+  {
+    "jp": "ゆっくり",
+    "ln": "slow",
+    "type": "adv",
+    "cat": "程度"
+  },
+  {
+    "jp": "速く",
+    "ln": "fast",
+    "type": "adv",
+    "cat": "程度"
+  },
+
+  // 8. 抽象・社会・芸術
+  {
+    "jp": "魔法",
+    "ln": "magi",
+    "type": "obj",
+    "cat": "抽象"
+  },
+  {
+    "jp": "希望",
+    "ln": "hope",
+    "type": "obj",
+    "cat": "抽象"
+  },
+  {
+    "jp": "絶望",
+    "ln": "desp",
+    "type": "obj",
+    "cat": "抽象"
+  },
+  {
+    "jp": "運命",
+    "ln": "fate",
+    "type": "obj",
+    "cat": "抽象"
+  },
+  {
+    "jp": "力",
+    "ln": "powx",
+    "type": "obj",
+    "cat": "抽象"
+  },
+  {
+    "jp": "平和",
+    "ln": "peac",
+    "type": "obj",
+    "cat": "社会"
+  },
+  {
+    "jp": "戦争",
+    "ln": "warx",
+    "type": "obj",
+    "cat": "社会"
+  },
+  {
+    "jp": "音楽",
+    "ln": "musx",
+    "type": "obj",
+    "cat": "芸術"
+  },
+  {
+    "jp": "色",
+    "ln": "colo",
+    "type": "obj",
+    "cat": "自然"
+  }
+
+
+  ],
+
+  phraseData: [
   {
     "jp": "私は猫を愛している",
     "ln": "nek glis^S ie",
