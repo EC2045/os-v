@@ -1,53 +1,109 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>OS^v語ポータル</title>
-<link rel="stylesheet" href="style.css">
-<script src="data.js"></script>
-<script src="app.js"></script>
-</head>
-<body>
-<div class="wrap">
-  <header class="hero">
-    <h1>OS^v語ポータル</h1>
-    <p>OS^v語の機能を分割して、使いやすく拡張した版です。</p>
-  </header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>os^v語 公式サイト</title>
+  <meta name="description" content="os^v語の文法・辞書・例文・翻訳・学習・文生成をまとめた公式サイトです。">
+  <link rel="stylesheet" href="style.css">
   
-    <div class="nav">
-      <a href="index.html">ホーム</a>
-      <a href="builder.html" >文章ビルダー</a>
-      <a href="translator.html" >翻訳ツール</a>
-      <a href="dictionary.html" >辞書</a>
-      <a href="phrases.html" >例文集</a>
-      <a href="learning.html" >学習ソフト</a>
-      <a href="grammar.html" >文法ガイド</a>
-    </div>
+</head>
+<body data-page="index">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <strong id="site-title">os^v語 公式ポータル</strong>
+        <span id="site-subtitle">Object → Verb → Subject</span>
+      </div>
+      <nav class="nav" id="site-nav">
+        <a href="index.html" data-page="index">ホーム</a>
+        <a href="portal.html" data-page="portal">ポータル</a>
+        <a href="dictionary.html" data-page="dictionary">辞書</a>
+        <a href="grammar.html" data-page="grammar">文法</a>
+        <a href="phrases.html" data-page="phrases">例文</a>
+        <a href="translator.html" data-page="translator">翻訳</a>
+        <a href="learning.html" data-page="learning">学習</a>
+        <a href="builder.html" data-page="builder">生成</a>
+      </nav>
+    </header>
+
     
+<section class="hero">
+  <div class="chips-wrap">
+    <span class="chip">OSV語順</span>
+    <span class="chip">時制記号</span>
+    <span class="chip">複数形記号</span>
+    <span class="chip">世界観ポータル</span>
+  </div>
+  <h1>os^v語</h1>
+  <p>
+    目的語 → 動詞 → 主語 の順で組み立てる、記号中心の人工言語です。<br>
+    この公式サイトでは、文法・辞書・例文・翻訳・学習・文生成をまとめて確認できます。
+  </p>
+  <div class="hero-actions">
+    <a class="btn primary" href="portal.html">ポータルへ入る</a>
+    <a class="btn" href="grammar.html">文法を見る</a>
+    <a class="btn" href="dictionary.html">辞書を開く</a>
+  </div>
+</section>
 
-<div class="grid grid-2">
+<div class="grid-2">
   <section class="card">
-    <h2>入口</h2>
-    <p class="muted">必要な機能を個別のHTMLで開けます。</p>
-    <div class="list">
-      <a class="item" href="translator.html"><strong>翻訳ツール</strong><div class="muted">双方向翻訳・自動判定・文型補助</div></a>
-      <a class="item" href="learning.html"><strong>学習ソフト</strong><div class="muted">日本語→OS^v語 / OS^v語→日本語 / 単語当て</div></a>
-      <a class="item" href="dictionary.html"><strong>辞書</strong><div class="muted">検索・分類・並べ替え</div></a>
-      <a class="item" href="builder.html"><strong>文章ビルダー</strong><div class="muted">語順を選びながら文を組み立てる</div></a>
+    <div class="section-title">
+      <h2>このサイトの見どころ</h2>
+    </div>
+    <div class="grid-two">
+      <div class="panel">
+        <h3>語順</h3>
+        <p>OSV を基本に、意味を前から積み上げます。</p>
+      </div>
+      <div class="panel">
+        <h3>記号</h3>
+        <p>時制や文の性質を記号で明示します。</p>
+      </div>
+      <div class="panel">
+        <h3>辞書</h3>
+        <p>カテゴリ別に語彙をすばやく検索できます。</p>
+      </div>
+      <div class="panel">
+        <h3>学習</h3>
+        <p>例文とクイズで自然に覚えられます。</p>
+      </div>
     </div>
   </section>
   <section class="card">
-    <h2>拡張ポイント</h2>
-    <div class="list">
-      <div class="item"><strong>翻訳</strong><div class="muted">OS^v→日本語も対応、方向自動判定つき。</div></div>
-      <div class="item"><strong>学習</strong><div class="muted">4種類以上の出題モードを用意。</div></div>
-      <div class="item"><strong>辞書</strong><div class="muted">語彙を大幅増量済み。</div></div>
+    <div class="section-title">
+      <h2>基本例</h2>
     </div>
+    <div class="code-line"><code>nek glis^S ie</code></div>
+    <p style="color:var(--muted); line-height:1.85; margin-top:14px;">
+      「猫を・愛している・私は」という基本構造です。
+    </p>
+    <div class="code-line"><code>nlot zwrath xnor^S morn</code></div>
+    <div class="code-line"><code>^? thlornv be^S kox ^?</code></div>
+    <div class="code-line"><code>^! vothx fallyn^S enxa ^!</code></div>
   </section>
 </div>
 
-  <div class="footer">OS^v Language Suite</div>
-</div>
+<section class="card" style="margin-top:18px;">
+  <div class="section-title">
+    <h2>入口の使い方</h2>
+  </div>
+  <div class="grid-3">
+    <div class="panel"><strong>ポータル</strong><p>全ページの統括ハブです。</p></div>
+    <div class="panel"><strong>翻訳</strong><p>語彙ベースで対訳を試せます。</p></div>
+    <div class="panel"><strong>生成</strong><p>OSV の並びを組み立てられます。</p></div>
+  </div>
+</section>
+
+
+    <footer class="footer">
+      <div>© <span id="year"></span> os^v語 公式サイト</div>
+      <div id="site-description"></div>
+    </footer>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/EC2045/scripts/font.js"></script>
 </body>
 </html>

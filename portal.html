@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>os^v語 例文</title>
+  <title>os^v語 ポータル</title>
   <meta name="description" content="os^v語の文法・辞書・例文・翻訳・学習・文生成をまとめた公式サイトです。">
   <link rel="stylesheet" href="style.css">
   
 </head>
-<body data-page="phrases">
+<body data-page="portal">
   <div class="shell">
     <header class="topbar">
       <div class="brand">
@@ -29,15 +29,22 @@
 
     
 <section class="hero" style="padding-top:26px;">
-  <h1>例文</h1>
-  <p>基本文と定型表現。文を読む感覚をつかむためのページです。</p>
+  <div class="chips" id="portal-chips"></div>
+  <h1>PORTAL</h1>
+  <p>
+    すべてのファイルを統括する中心画面です。<br>
+    まるでディレクトリを開くように、各ページへ移動できます。
+  </p>
 </section>
-<section class="card">
+
+<div class="metrics" id="portal-highlights"></div>
+
+<section class="card" style="margin-top:18px;">
   <div class="section-title">
-    <h2>例文</h2>
-    <p>短い文から慣れていきます</p>
+    <h2>ファイル一覧</h2>
+    <p>サイト全体の構成をひと目で確認</p>
   </div>
-  <div id="phrase-grid" class="phrase-grid"></div>
+  <div class="file-table" id="portal-files"></div>
 </section>
 
 
