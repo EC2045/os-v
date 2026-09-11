@@ -1,15 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>os^v語 単語学習帳（開発は後で）</title>
-  <style>
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>os^v語 学習</title>
+  <meta name="description" content="os^v語の公式サイトです。">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<h1>現在開発中です。</h1>
-
+<body data-page="learning">
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <strong id="site-title">os^v語 公式ポータル</strong>
+        <span id="site-subtitle">Object → Verb → Subject</span>
+      </div>
+      <nav class="nav" id="site-nav">
         <a href="index.html" data-page="index">ホーム</a>
         <a href="portal.html" data-page="portal">ポータル</a>
         <a href="dictionary.html" data-page="dictionary">辞書</a>
@@ -18,6 +23,72 @@
         <a href="translator.html" data-page="translator">翻訳</a>
         <a href="learning.html" data-page="learning">学習</a>
         <a href="builder.html" data-page="builder">生成</a>
-        
+      </nav>
+    </header>
+    
+<section class="hero" style="padding-top:26px;">
+  <h1>学習</h1>
+  <p>4択クイズ、例文翻訳、単語練習をひとまとめにした学習ページです。スコアは保存されます。</p>
+</section>
+<section class="card">
+  <div class="section-title"><h2>進捗</h2><p>保存済みのスコアを確認</p></div>
+  <div id="progress-view"></div>
+</section>
+<div class="grid-2" style="margin-top:18px;">
+  <section class="card">
+    <div class="section-title"><h2>4択クイズ</h2><p>スコア: <span id="quiz-score">0</span></p></div>
+    <div id="quiz-box" class="panel"></div>
+    <div id="quiz-options" class="choice-grid"></div>
+    <div class="hero-actions" style="margin-top:12px;"><button id="quiz-next" class="btn" type="button">次へ</button></div>
+    <div id="quiz-feedback" class="help" style="margin-top:10px;"></div>
+  </section>
+  <section class="card">
+    <div class="section-title"><h2>例文の翻訳</h2><p>スコア: <span id="trans-score">0</span></p></div>
+    <div id="trans-prompt" class="panel"></div>
+    <div style="height:12px"></div>
+    <label for="trans-input">答え</label>
+    <textarea id="trans-input" placeholder="os^v語を入力してください"></textarea>
+    <div class="hero-actions" style="margin-top:12px;">
+      <button id="trans-check" class="btn primary" type="button">採点</button>
+      <button id="trans-reveal" class="btn" type="button">答えを見る</button>
+      <button id="trans-next" class="btn" type="button">次へ</button>
+    </div>
+    <div id="trans-answer" class="code-line">未表示</div>
+    <div id="trans-hint" class="help" style="margin-top:10px;"></div>
+  </section>
+</div>
+<div class="grid-2" style="margin-top:18px;">
+  <section class="card">
+    <div class="section-title"><h2>単語練習</h2><p>スコア: <span id="word-score">0</span></p></div>
+    <div id="word-prompt" class="panel"></div>
+    <div style="height:12px"></div>
+    <label for="word-input">回答</label>
+    <input id="word-input" class="searchbar" placeholder="例: nek">
+    <div class="hero-actions" style="margin-top:12px;">
+      <button id="word-submit" class="btn primary" type="button">確認</button>
+      <button id="word-next" class="btn" type="button">次の単語</button>
+    </div>
+    <div id="word-result" class="help" style="margin-top:10px;"></div>
+  </section>
+  <section class="card">
+    <div class="section-title"><h2>学習のコツ</h2></div>
+    <div class="lesson-list">
+      <div class="lesson-item"><strong>1. 4択</strong> 単語や文法の意味を素早く確認します。</div>
+      <div class="lesson-item"><strong>2. 翻訳</strong> 例文を os^v語に直して、語順を身体で覚えます。</div>
+      <div class="lesson-item"><strong>3. 単語</strong> 一語だけを問う練習で、辞書の定着を早めます。</div>
+      <div class="lesson-item"><strong>4. 復習</strong> スコアは保存されるので、続けやすくなります。</div>
+    </div>
+  </section>
+</div>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> os^v語 公式サイト</div>
+      <div id="site-description"></div>
+    </footer>
+  </div>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/learning.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/EC2045/scripts/font.js"></script>
 </body>
 </html>

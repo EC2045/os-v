@@ -40,7 +40,7 @@ window.OSV_DATA = {
     {
       ja: "猫を愛する私は。",
       osv: "nek glis^S ie",
-      note: "基本形の例。OSVの順に並びます。"
+      note: "基本形の例。OVSの順に並びます。"
     },
     {
       ja: "人々は秘密を知らない。",
